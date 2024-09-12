@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .main{
+      background-image: url("/tela-encerada.png");
+      background-repeat:no-repeat;
+      background-size:100%;
+      height: 400px;
+
+      padding-top: 90px;
+      padding-left: 800px;  
+    }
+    .searchbtn{
+      padding: 8px;
+      border-radius: 25px;
+      padding-left: 35px;
+      /* background-color: transparent; */
+      margin-left: 90px;
+    }
+    /* #icon{
+      padding: 18px;
+      margin-left: 10px;
+      color: white;
+      background-color: orangered;
+      border:1px solid white;
+      border-radius:50%;
+      padding-bottom: 11px;
+      padding-left: 14px;
+      padding-right: 14px;
+      padding-top: 11px; */
+    /* } */
+    .text{
+      margin-top: 100px;
+      margin-left: 200px;
+      margin-bottom: 4%;
+    }
+    .row:after{
+      content: "";
+      display: table;
+      clear: both;
+      margin-right: 100px;
+      /* border: 1px solid red; */
+      
+    }
+    .column{
+      float: left;
+      width: 250px;
+      padding: 1px;
+      /* border: 1px solid black;  */
+      /* background-color: silver; */
+      margin-bottom: 10px;
+      /* padding-left: 10px; */
+      margin-right: 9px;
+      /* padding-top: 10px; */
+      margin-top: 10px;
+      margin-inline-start: 3%;
+    }
+    .img{
+      width: 100%;
+      border: 1px solid white;
+      background:linear-gradient(white, silver, silver);
+      /* background-color: whitesmoke; */
+
+    }
+    
+    .raj{
+      border: 1px solid white;
+      background-color: orangered;
+      color: white;
+      margin-right: 1px;
+      padding: 1px;
+    }
+    #searchbox{
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 70%;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      margin-left: 10px;
+      background-color: orangered;
+      color: white;
+
+    }
+  </style>
+  
+  
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary fixed">
+    <div class="container-fluid" style="background-color:rgb(255, 94, 0); padding: 2px;">
+      <span style="padding-left:300px;margin-left: 30px;"><i class="bi bi-house-fill"></i></span>
+      <a class="navbar-brand" href="#" style="margin-right: 1000px;">MEAL FINDER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">items</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style=" border: 3px solid;border-radius: 20px;color: orangered; "></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Beef</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="">Chicken</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Dessert</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Lamb</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Miscellaneous</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Pasta</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Pork</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Seafood</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Side</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Starter</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Vegan</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Vegetarian</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Breakfast</a><hr>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Goat</a><hr>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- -----------------------------------navbar ends Here-------------------------------------------------------------------------------------------- -->
+
+  <form class="main">
+    <input type="text" placeholder="search recipes here" class="searchbox"/>
+    <button id="searchbtn"><i class="bi bi-search"></i></button>
+    <!-- <a href="" id="icon" onclick="icon"><i class="bi bi-search"></i></a> -->
+    <!-- <span id="icon"><i class="bi bi-search"></i></span> -->
+    <h2 style="margin-top: 15px;padding: 1px;color: white;">What are your favorite cuisines?</h2>
+    <h6 style="margin-top: 15px;padding-left: 100px; color: white;">PERSONALIZE YOUR EXPERIENCE</h6>
+  </form>
+<!-- -----------------------------searchbar End Here------------------------------------------------------------------------------------------------------------ -->
+
+  <h5 class="text"><b>CATEGORIES</b></h5>
+  
+ <!------------------------------------------categories-end here---------------------------------------------------------------------------------- --> 
+<!-- <div>
+<div class="recipe-container"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 200px;">Beef</h6>
+    <img src="/Screenshot 2024-09-08 at 11-58-06 beef.png (PNG Image 320 × 200 pixels).png" class="img"/>
+     <h6 class="raj" style="margin-left: 200px;">Beef</h6> -->
+  <!-- </div>
+
+  <div class="row"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 177px;">Chicken</h6>
+    <img src="/chicken.png" class="img"/>
+  </div>
+
+
+<div class="row"></div>
+  <div class="column"> 
+    <h6 class="raj" style="margin-left: 177px;">Dessert</h6>
+    <img src="/dessert.png" alt="" class="img">
+  </div>
+
+ <div class="column">
+    <h6 class="raj" style="margin-left: 198px;">Lamb</h6>
+    <img src="/lamb.png" alt="" class="img">
+  </div>
+</div>
+<div class="row"></div>
+<div class="column">
+  <h6 class="raj" style="margin-left: 120px; margin-right: 24px;">Miscellaneous</h6>
+  <img src="/miscellaneous.png" alt="" class="img">
+</div>
+
+
+<div class="column">
+  <h6 class="raj" style="margin-left: 200px;">Pasta</h6>
+  <img src="/pasta.png" alt="" class="img">
+</div>
+
+
+
+<div class="column">
+  <h6 class="raj" style="margin-left: 205px;">Pork</h6>
+  <img src="/pork.png" alt="" class="img">
+</div>
+
+
+<div class="row"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 172px;">Seafood</h6>
+    <img src="/seafood.png" alt="" class="img">
+  </div>
+
+  <div class="row1"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 211px;">side</h6>
+    <img src="side.png" alt="" class="img">
+  </div>
+
+  <div class="row1"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 185px;">starter</h6>
+    <img src="/starter.png" alt="" class="img">
+  </div>
+
+  <div class="row"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 190px;">vegan</h6>
+    <img src="vegan.png" alt="" class="img">
+  </div>
+
+  <div class="row1"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 150px; margin-right: 20px;">vegetarian</h6>
+    <img src="/vegetarian.png" alt="" class="img">
+  </div>
+
+  <div class="row1"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 160px;">Breakfast</h6>
+    <img src="/breakfast.png" alt="" class="img">
+  </div>
+
+  <div class="row1"></div>
+  <div class="column">
+    <h6 class="raj" style="margin-left: 200px;">Goat</h6>
+    <img src="/goat.png" alt="" class="img">
+  </div>
+  
+</div><br><br><br><br><br><br><br><br><br> -->
+<!-- -----------------------------card End Here----------------------------------------------------------------------------------------------------------------------------- -->
+<div>
+</div>
+<script>
+let searchbox=document.getElementsByClassName('searchbox');
+let searchbtn=document.getElementById('searchbtn');
+// let recipecontainer = document.querySelector('recipecontainer');
+
+ fetchrecipe= async(quary) =>{
+  let data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${quary}`);
+  let response = await data.json();
+
+  response.meals.foreach (meal => {
+
+    // let recipeDiv = document.createElement('Div');
+    // recipeDiv.classList.add('recipe');
+    // recipeDiv.innerHTML = `
+    // <img src="${meal.strlthumb}">
+    // `
+    // recipecontainer.appendChild(recipeDiv);
+
+
+
+    console.log(meal);
+
+    
+  });
+  // console.log(response.meals[0]);
+  
+}
+
+
+searchbtn.addEventListener('click',(e)=>{
+  // console.log("button click");
+  e.preventDefault();
+  let searchinput =searchbtn.value.trim();
+  fetchrecipe(searchbtn);
+
+
+  
+});
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h5>fbbwrbwrbb
+  rberbreb
+  rberbrebbr
+  rberbrebreb
+  erb
+  recipesbr
+  eb
+  rberbrebre
+  <b>rberbreb
+  </h5>
+
+    hvbiygiiygbhkhwevkbwewevevbvdvjbweu vagwog hwhgjwebvweggwegweg
+    gwgbkwejgewg -->
+
+
+
+
+
+
+   <!-- <h1>ujbiubu</h1>
+  <h1>bibbwihbeviyb</h1>
+  jbjbibibjbekbfijerijbjb
+  kjvbijberibjverib
+  nojnnn
+  <div>ojfibiub</div>
+  <div>ououvweouv</div>
+  jhoauhoeqouou -->
+</body>
+</html>
