@@ -68,8 +68,8 @@
       background:linear-gradient(white, silver, silver);
       /* background-color: whitesmoke; */
 
-    }
-    
+    } 
+
     .raj{
       border: 1px solid white;
       background-color: orangered;
@@ -169,14 +169,12 @@
   <h5 class="text"><b>CATEGORIES</b></h5>
   
  <!------------------------------------------categories-end here---------------------------------------------------------------------------------- --> 
-<!-- <div>
-<div class="recipe-container"></div>
+
+<div class="row"></div>
   <div class="column">
     <h6 class="raj" style="margin-left: 200px;">Beef</h6>
     <img src="/Screenshot 2024-09-08 at 11-58-06 beef.png (PNG Image 320 × 200 pixels).png" class="img"/>
-     <h6 class="raj" style="margin-left: 200px;">Beef</h6> -->
-  <!-- </div>
-
+  </div>
   <div class="row"></div>
   <div class="column">
     <h6 class="raj" style="margin-left: 177px;">Chicken</h6>
@@ -195,12 +193,12 @@
     <img src="/lamb.png" alt="" class="img">
   </div>
 </div>
+
 <div class="row"></div>
 <div class="column">
   <h6 class="raj" style="margin-left: 120px; margin-right: 24px;">Miscellaneous</h6>
   <img src="/miscellaneous.png" alt="" class="img">
 </div>
-
 
 <div class="column">
   <h6 class="raj" style="margin-left: 200px;">Pasta</h6>
@@ -256,45 +254,27 @@
     <h6 class="raj" style="margin-left: 200px;">Goat</h6>
     <img src="/goat.png" alt="" class="img">
   </div>
-  
-</div><br><br><br><br><br><br><br><br><br> -->
-<!-- -----------------------------card End Here----------------------------------------------------------------------------------------------------------------------------- -->
-<div>
-</div>
+  <!-- -----------------------------card End Here----------------------------------------------------------------------------------------------------------------------------- -->
+
 <script>
-let searchbox=document.getElementsByClassName('searchbox');
-let searchbtn=document.getElementById('searchbtn');
+const searchbox=document.getElementsByClassName('searchbox');
+const searchbtn=document.getElementById('searchbtn');
 // let recipecontainer = document.querySelector('recipecontainer');
 
- fetchrecipe= async(quary) =>{
-  let data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${quary}`);
+ fetchrecpie=async(quary) =>{
+  let data = await fetch (`https://www.themealdb.com/api/json/v1/1/search.php?s=${quary}`);
   let response = await data.json();
 
-  response.meals.foreach (meal => {
+  response.meals.foreach (meals => {
 
-    // let recipeDiv = document.createElement('Div');
-    // recipeDiv.classList.add('recipe');
-    // recipeDiv.innerHTML = `
-    // <img src="${meal.strlthumb}">
-    // `
-    // recipecontainer.appendChild(recipeDiv);
-
-
-
-    console.log(meal);
-
-    
+        console.log(meal);
   });
-  // console.log(response.meals[0]);
-  
 }
-
-
 searchbtn.addEventListener('click',(e)=>{
   // console.log("button click");
   e.preventDefault();
   let searchinput =searchbtn.value.trim();
-  fetchrecipe(searchbtn);
+  fetchrecpie(searchbtn);
 
 
   
